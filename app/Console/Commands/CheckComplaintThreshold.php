@@ -21,10 +21,10 @@ class CheckComplaintThreshold extends Command
         $totalComplainsrange = Complain::where('starting_datetime', '<=', $currentDateTime)
             ->where('ending_datetime', '>=', $currentDateTime)
             ->first();
-            $threshold = optional(ThresholdComplain::first())->total ?? 0;
+            $threshold = ThresholdComplain::first();
 
-        if ($totalComplainsrange) {
-            if ($totalComplainsrange->total_complain > $threshold && $totalComplainsrange->total_complain > 0) {
+        if ($totalComplainsrange !== null && $threshold !== null) {
+            if ($totalComplainsrange->total_complain > $threshold->total && $totalComplainsrange->total_complain > 0) {
                 $client = new \GuzzleHttp\Client();
                 $response = $client->post('https://4666-103-122-65-230.ngrok-free.app/api/webhook/pingtalk', [
                     'json' => [

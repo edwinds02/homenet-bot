@@ -15,7 +15,7 @@ class ComplainController extends Controller
         DB::table('webhook_data')->insert([
             'body' =>  json_encode($request -> all()),
         ]);
-
+        
         return response()->json(['message' => 'Data komplain berhasil disimpan'], 200);
     }
 }
