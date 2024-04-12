@@ -21,7 +21,7 @@ class CheckComplaintThreshold extends Command
         $totalComplainsrange = Complain::where('starting_datetime', '<=', $currentDateTime)
             ->where('ending_datetime', '>=', $currentDateTime)
             ->first();
-            $threshold = ThresholdComplain::first();
+        $threshold = ThresholdComplain::first();
 
         if ($totalComplainsrange !== null && $threshold !== null) {
             if ($totalComplainsrange->total_complain > $threshold->total && $totalComplainsrange->total_complain > 0) {

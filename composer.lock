@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfe12996eeecb6fdc8713a9fd9d431f8",
+    "content-hash": "856731cc90914b26222eddd22a3990ba",
     "packages": [
         {
             "name": "brick/math",
@@ -1044,6 +1044,67 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "homenet.dev/routeros-api",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "C:/laragon/www/package/routeros-api",
+                "reference": "75ecb11915960c6b50e7787e12ab5115bb9d4135"
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "pestphp/pest": "^2.20",
+                "spatie/ray": "^1.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HomeNet\\RouterosApi\\": "src"
+                },
+                "files": [
+                    "helper/UptimeHelper.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HomeNet\\RouterosApi\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rupadana",
+                    "email": "rupadanawayan@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is my package routeros-api",
+            "homepage": "https://github.com/homenet.dev/routeros-api",
+            "keywords": [
+                "HomeNet",
+                "routeros-api"
+            ],
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "laravel/framework",
@@ -8124,7 +8185,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
