@@ -19,8 +19,8 @@ Artisan::command('tes', function () {
     $routerApi = RouterAPI::make('10.70.108.166', 'admin', 'RexusBattlefire');
 
     //cek waktu uptime dalam waktu second (detik)
-    // $test = $routerApi->uptime();
-    // $formattedUptime = convertMikrotikTimeToSecond($test);
+    $test = $routerApi->uptime();
+    $formattedUptime = convertMikrotikTimeToSecond($test);
 
     //cek status isolasi enable atau disable
     // $isolation = $routerApi->isIsolationHotspotEnable();
@@ -32,7 +32,7 @@ Artisan::command('tes', function () {
     // $interface = $routerApi->interfaces();
 
     //pake paramater $namainterface $duration (durasi)
-    $trafficinterface = $routerApi->trafficmonitor('wlan1', 5);
+    // $trafficinterface = $routerApi->trafficmonitor('wlan1', 10);
 
     //pake parameter $host (nama host/tujuan ping)
     // $ping = $routerApi->ping('www.google.com', '5');
@@ -40,7 +40,7 @@ Artisan::command('tes', function () {
     //untuk mengubah status isolasi hotspot dengan menggunakan boolean false/true
     // $isolationChange = $routerApi->setHotspotIsolation(false);
 
-    dd($trafficinterface);
+    dd($formattedUptime);
 });
 
 Artisan::command('inspire', function () {

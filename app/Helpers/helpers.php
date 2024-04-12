@@ -1,8 +1,8 @@
 <?php
 
 if(!function_exists('convertMikrotikTimeToSecond')){
-    function convertMikrotikTimeToSecond($uptimeString){
-        preg_match('/(\d+)w(\d+)d(\d+)h(\d+)m(\d+)s/', $uptimeString, $matches);
+    function convertMikrotikTimeToSecond($uptime){
+        preg_match('/(\d+)w(\d+)d(\d+)h(\d+)m(\d+)s/', $uptime, $matches);
         
         $weeks = $matches[1];
         $days = $matches[2];
