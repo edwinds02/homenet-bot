@@ -33,7 +33,7 @@ Artisan::command('tes', function () {
 
     //pake paramater $namainterface $duration (durasi)
     // $trafficinterface = $routerApi->trafficmonitor('wlan1', 3);
-    $avgrxtx = $routerApi->avgTrafficMonitor('wlan1', 7);
+    // $avgrxtx = $routerApi->avgTrafficMonitor('wlan1', 7);
 
     //pake parameter $host (nama host/tujuan ping)
     // $ping = $routerApi->ping('www.google.com', '7');
@@ -45,8 +45,12 @@ Artisan::command('tes', function () {
     //cek apakah device sudah terdaftar dengan salah satu parameter comment atau host-name
     // $isregistered = $routerApi->isDeviceRegistered('siapa');
 
+    // $prioP = $routerApi->priorityPrint();
+    // $prio = $routerApi->priorityDevice('192.168.1.48/32');
+    $unprio = $routerApi->unpriorityDevice('192.168.1.48/32');
+
     // dd($ping);
-    dd($avgrxtx);
+    dd($unprio);
 });
 
 Artisan::command('inspire', function () {
