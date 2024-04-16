@@ -26,7 +26,7 @@ Artisan::command('tes', function () {
     // $isolation = $routerApi->isIsolationHotspotEnable();
 
     //print data hotspot
-    $hotspot = $routerApi->hotspotServers();
+    // $hotspot = $routerApi->hotspotServers();
 
     // //print data interfaces
     // $interface = $routerApi->interfaces();
@@ -43,7 +43,7 @@ Artisan::command('tes', function () {
     // $isolationChange = $routerApi->setHotspotIsolation(false);
 
     //cek apakah device sudah terdaftar dengan salah satu parameter comment atau host-name
-    // $isregistered = $routerApi->isDeviceRegistered('gaada');
+    $isregistered = $routerApi->isDeviceRegistered('Amrise');
 
     //untuk print priority dan mengubah status priority
     // $prioP = $routerApi->priorityPrint();
@@ -51,7 +51,7 @@ Artisan::command('tes', function () {
     // $unprio = $routerApi->unpriorityDevice('192.168.1.48/32');
 
     // dd($ping);
-    dd($hotspot);
+    dd($isregistered);
 });
 
 Artisan::command('inspire', function () {

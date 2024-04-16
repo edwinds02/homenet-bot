@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComplainController;
 
 Route::post('/webhook/pingtalk', [ComplainController::class, 'storeFromWebhook']);
+// Route::post('/webhook/pingtalktes', [ComplainController::class, 'cantConnectSite']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
